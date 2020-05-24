@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Intro</title>
+	<!-- <script type="text/javascript" src="jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<p class="para" style="background-color: green;color:white;">This is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first ParagaphThis is first Paragaph</p>
+	<p id="para2" style="background-color: red;color:white;">This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2This is Paragraph2</p>
+	<ul id ="listItem" style="list-style-type: none;font-size: 20px;color:orange">
+		
+		<li value="List 1">List 1</li>
+		<li value="List 2">List 2</li>
+		<li value="List 3">List 3</li>
+		<li value="List 4">List 4</li>
+	</ul>
+	<div id="test">I am going to hide </div>
+	<button onclick="hideAndshow()" id="btnClick">Hide/Show</button>
+	<script type="text/javascript">
+		// document.getElementById('test').innerHTML = 'Hello World By Javascript';
+		// function hideAndshow(){
+		// 	document.getElementById('test').style.display = "none";
+		// }
+
+		$(document).ready(function(){
+			// $('#test').text("Hello World by JQuery");
+			$('#btnClick').click(function(){
+				// $('#test').toggle();
+				// $('li:first').hide(); //hide first list item
+				// $('li:last').hide(); //hide last list item
+			});
+
+	    $('#listItem li').change(function(){
+				// ev.preventDefault();
+				 // var value = $(this).text();
+				 value = $(this).attr('value');
+				 var index = $(this).index();
+				 alert("Selected value is "+value+" of index is "+index);
+			});
+		});
+	</script>
+
+</body>
+</html>

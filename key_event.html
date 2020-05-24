@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Key Events</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<!-- keyup()
+	keydown()
+	keypress() -->
+	<form>
+		<label>Username:</label><input type='text' name='username'/><p style="display: inline-block;"></p>
+	</form>
+	<div class="display"></div>
+<script>
+	$(document).ready(function(){
+		$('input').keyup(function(){
+			// var value = "";
+			// $(this).css('backgroundColor','red'); 
+
+			var value = $(this).val();
+
+			if (value.length<=8){
+
+				$('p').text('Username at lest 8 characters');
+				$('p').css('color','red');
+				
+			}
+			else {
+				$('p').text('');
+
+			}
+			// $('.display').text(value);
+
+		});
+
+	});
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery CSS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	css("propertyname","value")
+	<a id="btnClick" href="#">This link property going to change</a>
+<script>
+	$(document).ready(function(){
+		$("#btnClick").click(function(){
+			$('#btnClick').css({
+				'textDecoration':'none',
+				'backgroundColor':'green',
+				'fontSize':'30px',
+				'color':'white',
+			});
+
+		});
+	});
+	
+</script>
+</body>
+</html>

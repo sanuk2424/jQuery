@@ -1,0 +1,57 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced Selector CSS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+		<div style="width:50%;margin:auto;">
+	<ol type="1">
+		<li>index 0:Java</li>
+		<li>index 1:HTML</li>
+		<li>index 2:CSS</li>
+		<li>index 3:Javascript</li>
+		<li>index 4:Python</li>
+	</ol>
+	<ol type="1" id="unorderList">
+		
+		<li>index 0:Java</li>
+		<li>index 1:HTML</li>
+		<li>index 2:CSS</li>
+		<li>index 3:Javascript</li>
+		<li>index 4:Python</li>
+	</ol>
+	<button id="btnClick">Click Me</button>
+
+</div>
+<script>
+	$(document).ready(function(){
+		$('#btnClick').click(function(){
+			// $('*').css('backgroundColor',"green"); //universal selector
+			// $(this).css('backgroundColor',"green");  //select current element
+			// $('[type]').toggle('slow');  //select the attribute of type
+			// $('li:even').css('color','red'); //select all the even list items
+			  // $('li:odd').css('color','red'); //select all the odd list items
+			  // $('li:first').css('color','red'); //select the first list item
+			  // $('li:last').css('color','red'); //select the last list item
+			  // $('li:nth-child(3)').css('color','red'); //select the 3 rd item from beginning of list
+			  // $('li:nth-last-child(2)').css('color','red'); //select the 2 nd item from end of the list
+			 $('#unorderList li:first').css('color','red'); //select the first item of list having id of unorderList
+
+
+
+		});
+
+	});
+
+</script>
+</body>
+</html>
